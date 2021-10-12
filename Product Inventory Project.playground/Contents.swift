@@ -65,8 +65,9 @@ struct Supplier{
 
 }
 struct Order{
-    static var lastId = 0
+    //class member
 
+    static var lastId = 0
     var orderId = Order.createNewId()
     var orderDate : String
     var supplierName : String
@@ -97,14 +98,14 @@ struct Order{
     mutating func deleteOrder(Index: Int){
         
         o.remove(at: Index)
-        print("Successfully Removed")
+        print("The order is removed sucsessfully")
     }
     
 
 }
 
 class Products {
-    
+    //class member
     var productId = Products.createNewId()
     var productName :String
     var productPrice :Int
@@ -125,17 +126,7 @@ class Products {
         self.category = Categories.init(categoryId: 2,  categoryName: categoryName)
         
     }
-    
-//    func checkIs(filtterdValue : String, c:[String] ) -> Bool{
-//             varcheck : Bool = false
-//           for element in c {
-//               if( filtterdValue == element){
-//                   check = true
-//                   break
-//               }
-//           }
-//             return check
-//         }
+
         
     func addProduct(p1: Products){
         p.append(p1)
