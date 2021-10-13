@@ -31,6 +31,7 @@ struct Categories {
     
 }
 struct Supplier{
+    
     static var lastId = 0
     var supplierId = Supplier.createNewId()
     var supplierName : String
