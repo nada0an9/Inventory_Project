@@ -1,8 +1,8 @@
 # Inventory_Project
 
-##Overview
+## Overview
 
-### The purpose of this system is to help in the most important processes in any Inventory business. which are  adding new products, creating new categories, assign products to categories, list all-out stock products, and create a new order.
+###  The purpose of this system is to help in the most important processes in any Inventory business. which are  adding new products, creating new categories, assign products to categories, list all-out stock products, and create a new order.
 
 ## Usage 
 - addProduct(p1: Products)

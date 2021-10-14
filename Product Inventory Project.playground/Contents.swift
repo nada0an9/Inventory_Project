@@ -67,10 +67,9 @@ struct Supplier{
 }
 struct Order{
     //class member
-
     static var lastId = 0
     var orderId = Order.createNewId()
-    var orderDate : String
+    var orderDate : Date
     var supplierName : String
     var proudectName : String
     var orderQuantity : Int
@@ -111,7 +110,7 @@ class Products {
     var productName :String
     var productPrice :Int
     var productQuantity :Int
-    var category : Categories
+    var category : String
     var p = [Products]()
     static var lastId = 0
 
@@ -124,7 +123,7 @@ class Products {
         self.productName = productName
         self.productPrice = productPrice
         self.productQuantity = productQuantity
-        self.category = Categories.init(categoryId: 2,  categoryName: categoryName)
+        self.category = categoryName
         
     }
 
@@ -142,7 +141,7 @@ class Products {
             print(element.productName)
             print(element.productPrice)
             print(element.productQuantity)
-            print(element.category.categoryName)
+            print(element.category)
 
             
         }
@@ -154,7 +153,7 @@ class Products {
                 print(element.productName)
                 print(element.productPrice)
                 print(element.productQuantity)
-                print(element.category.categoryName)
+                print(element.category)
             }
         }
     }
@@ -205,39 +204,32 @@ enum options : String{
 }
 
 //Categories
-var c = Categories(categoryName: "dd")
+var c = Categories(categoryName: "Clothes")
 c.addCategory(c1: c)
 c.showCategories()
 
 //Supplier
-var s = Supplier(supplierName: "wsss", supplierPhone: 0554444333)
+var s = Supplier(supplierName: "Ahmed", supplierPhone: 0554444333)
 s.addSupplier(s1: s)
 s.showSuppliers()
 
 
 //Products
-var p1 = Products(productName: "shose", productPrice: 300, productQuantity: 40, categoryName: "df")
+var p1 = Products(productName: "T-shirt", productPrice: 200, productQuantity: 40, categoryName: "Clothes")
+
 p1.addProduct(p1: p1)
 p1.showProducts()
 print("out of stuck")
 p1.showOutOfstuckProducts()
-p1.modifyProduct(index: 0, spesifiedOption: options.productName.rawValue, newValue: "sss")
+p1.modifyProduct(index: 0, spesifiedOption: options.productName.rawValue, newValue: "Tshirt")
 p1.showProducts()
 
 //Order
-var o = Order(orderDate: "2016/10/08 22:31", supplierName: "ee", proudectName: "d" ,orderQuantity:2)
+var o = Order(orderDate: Date(), supplierName: "Ahmed", proudectName: "Shose" ,orderQuantity:80)
 o.addOrdery(o1: o)
 o.showOrders()
 
-
-
-
-
-
-
-
-
-
-
-
+var o1 = Order(orderDate: Date(), supplierName: "Ahmed", proudectName: "bag" ,orderQuantity:10)
+o1.addOrdery(o1: o1)
+o1.showOrders()
 
